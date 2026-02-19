@@ -1,0 +1,23 @@
+INTERFACE AND POLYMORPHISM
+
+INTERFACE:
+
+Interface:
+    - An interface is like a blueprint that defines methods and properties a class must have but it doesn't provide the actual code for them.
+    - It's used to ensure different classes follow the same rules.
+
+Why Use An Interface:
+    Abstraction: 
+        - Defines what methods a class should implement without specifying how.
+        - Interfaces tell classes what they need to do, but not how to do it.
+    Polymorphism:
+        - Allows different classes to be treated as instances of the interface type.
+        - Interface let different classes be used in the same way.
+    Decoupling:
+        - Reduces dependencies between classes, making the code more modular and easier to maintain.
+        - Interfaces help keep classes separate so the code is easier to manage and update.
+    Reusability:
+        - Ensures that different classes can use comming methods, enhancing code reusability.
+        - Interface make it easy to reuse code across different classes.
+    
+    
