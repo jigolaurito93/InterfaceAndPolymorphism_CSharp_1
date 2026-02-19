@@ -41,5 +41,16 @@ Why Use Polymorphism:
     Simplifies the Code:
         - Enables treating different objects uniformly
 
+Where:
+    - When you need different classes to implement the same set of methods or properties.
+    - This ensures consistency and allows for flexible implementations.
+Why:
+    - Promotes code reusability and flexibility.
+    - Different classes can implement the same interface in various ways, allowing for diverse
+      behavior while maintaining a common contract.
+ When:
+    - Use interfaces when you have multiple classes that should provide the same functionality but might implement it differently.
+    - Real-world example: Payment Processing System     
+
     
     
