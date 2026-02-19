@@ -5,7 +5,13 @@ namespace InterfaceAndPolymorphism_CSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!!!");
+            Dog bulldog = new Dog();
+            bulldog.Speak();
+            bulldog.Eat("bone");
+
+            Cat siamese = new Cat();
+            siamese.Speak();
+            siamese.Eat("fish");
         }
     }
 }
