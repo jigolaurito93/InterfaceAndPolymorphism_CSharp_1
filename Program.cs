@@ -40,6 +40,10 @@ namespace InterfaceAndPolymorphism_CSharp
             // We call the ProcessOrderPayment method again, but now it will call the ProcessPayment method of the PayPalProcessor instance, demonstrating polymorphism.
             paymentService.ProcessOrderPayment(200.00m);
 
+            // Using the File class, we can write a long message to a log file called "log.txt".
+            // The AppendAllText method will create the file if it doesn't exist, or append to it if it does.
+            // The first argument is the file name, and the second argument is the message we want to write, followed by a newline character for better readability.
+            File.AppendAllText("log.txt", "Hello, this is a long message that will be written to the log file.\n");
         }
     }
 }

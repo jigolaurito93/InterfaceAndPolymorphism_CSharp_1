@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InterfaceAndPolymorphism_CSharp_1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6df2e48254f4e720fff65bbf4c50c7355af61558")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a56a53a771539a3798a7ec841f0ed4ddc920fe74")]
 [assembly: System.Reflection.AssemblyProductAttribute("InterfaceAndPolymorphism_CSharp_1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InterfaceAndPolymorphism_CSharp_1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
