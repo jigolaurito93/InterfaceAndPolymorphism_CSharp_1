@@ -13,7 +13,7 @@ namespace InterfaceAndPolymorphism_CSharp
             Cat siamese = new Cat();
             siamese.Speak();
             siamese.Eat("fish");
-            */
+            
 
             // Demonstrating polymorphism with the PaymentService and IPaymentProcessor interface
 
@@ -57,6 +57,15 @@ namespace InterfaceAndPolymorphism_CSharp
             ILogger dbLogger = new DatabaseLogger();
             app = new Application(dbLogger);
             app.GetLogger();
+            */
+
+            // Dependency: A relationship between two classes where one class relies on another class to function properly.
+            // In the context of interfaces and polymorphism, a class that depends on an interface is said to have a dependency on that interface. 
+            // This allows for loose coupling, as the class can work with any implementation of the interface without needing to know the details of how it works.
+
+            // The Builder class has a dependency on the Hammer and Saw classes, as it relies on them to perform its functionality of building a house.
+            Builder builder1 = new Builder();
+            builder1.BuildHouse();
         }
     }
 }
