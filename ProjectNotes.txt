@@ -57,3 +57,9 @@ AppendAllText:
     - The first argument is the file name, and the second argument is the message we want to write, followed by a newline character for better readability.
     - Example:
         - File.AppendAllText("log.txt", "Hello World!");
+
+Decoupling:
+    - By using interfaces and polymorphism, we can decouple a class by depending on the interface
+      rather than the specific implementation. 
+    - This means you can easily swap out different implementations 
+      without changing the code that uses it, making your code more flexible and maintainable.

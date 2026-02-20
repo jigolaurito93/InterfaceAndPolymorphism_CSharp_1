@@ -40,24 +40,23 @@ namespace InterfaceAndPolymorphism_CSharp
             // We call the ProcessOrderPayment method again, but now it will call the ProcessPayment method of the PayPalProcessor instance, demonstrating polymorphism.
             paymentService.ProcessOrderPayment(200.00m);
 
-            // The @ sign in C# is used to create a verbatim string literal, which allows us to include backslashes without needing to escape them.
-            string directoryPath = @"C:\Users";
-            string message = "This is a message that will be written to the log file.\n";
+            // Decoupling: By using interfaces and polymorphism, we can decouple a class by depending on the interface
+            // rather than the specific implementation. This means you can easily swap out different implementations of the interface 
+            // without changing the code that uses it, making your code more flexible and maintainable.
 
-            // We can combine the directory path with the file name to create a full file path using the Path.Combine method, 
-            // which ensures that the correct directory separator is used.
-            string filePath = System.IO.Path.Combine(directoryPath, "log.txt");
+            // We create an instance of FileLogger that implements the ILogger interface 
+            // and has a method called LogMessage() which takes a string message and writes it to a log file.
+            ILogger fileLogger = new FileLogger();
+            // We create an instance of Application class that takes an ILogger type in its constructor.
+            // We passed the fileLogger instance/object to the Application as an argument.
+            Application app = new Application(fileLogger);
+            // We call the GetLogger method from the Application class, which internally calls 
+            // the LogMessage method of the FileLogger instance to log messages to a file.
+            app.GetLogger();
 
-            // If the directory specified in the directoryPath variable does not exist, we can create it using the Directory.CreateDirectory method.
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-
-            // Using the File class, we can write a long message to a log file called "log.txt".
-            // The AppendAllText method will create the file if it doesn't exist, or append to it if it does.
-            // The first argument is the file name or file path, and the second argument is the message we want to write, followed by a newline character for better readability.
-            File.AppendAllText(filePath, message);
+            ILogger dbLogger = new DatabaseLogger();
+            app = new Application(dbLogger);
+            app.GetLogger();
         }
     }
 }
