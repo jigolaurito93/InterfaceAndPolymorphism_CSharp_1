@@ -5,11 +5,16 @@ namespace InterfaceAndPolymorphism_CSharp
     {
         private Hammer _hammer;
         private Saw _saw;
-        public Builder()
+
+        // Constructor Dependency Injection
+        public Builder(Hammer hammer, Saw saw)
         {
             // The Builder class has a dependency on the Hammer and Saw classes, as it relies on them to perform its functionality of building a house.
-            _hammer = new Hammer(); // 
-            _saw = new Saw();
+            //_hammer = new Hammer();
+            //_saw = new Saw();
+
+            _hammer = hammer;
+            _saw = saw;
         }
         public void BuildHouse()
         {

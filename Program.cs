@@ -64,7 +64,13 @@ namespace InterfaceAndPolymorphism_CSharp
             // This allows for loose coupling, as the class can work with any implementation of the interface without needing to know the details of how it works.
 
             // The Builder class has a dependency on the Hammer and Saw classes, as it relies on them to perform its functionality of building a house.
-            Builder builder1 = new Builder();
+            //Builder builder1 = new Builder();
+            //builder1.BuildHouse();
+
+            // Using Constructor Dependency Injection
+            Hammer hammer = new Hammer();
+            Saw saw = new Saw();
+            Builder builder1 = new Builder(hammer, saw);
             builder1.BuildHouse();
         }
     }
