@@ -89,7 +89,7 @@ namespace InterfaceAndPolymorphism_CSharp
             userNotification = new UserNotification(textService);
             userNotification.NotifyUser("Please open the door.");
 
-            */
+            
 
             // Setter Dependency Injection
             Cheesecake cheesecake = new Cheesecake(); // Create the dependency outside
@@ -99,6 +99,16 @@ namespace InterfaceAndPolymorphism_CSharp
             baker.Cheesecake = cheesecake; // Inject the dependency via Setters
             baker.CarrotCake = carrotcake; // Inject the dependency via Setters
             baker.BakePastry(); // Run the method
+
+            */
+            Margarita margarita = new Margarita(); // Creating dependency
+            JackCoke jackCoke = new JackCoke();
+            Bartender bartender = new Bartender();
+            bartender.ServeMargarita(margarita);    // Inject the dependency 
+            bartender.ServeJackCoke(jackCoke);
+            bartender.ServeDrinks();
+            
+
         }
     }
 }
