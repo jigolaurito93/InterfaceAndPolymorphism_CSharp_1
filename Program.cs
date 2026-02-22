@@ -71,7 +71,7 @@ namespace InterfaceAndPolymorphism_CSharp
             Saw saw = new Saw();
             Builder builder1 = new Builder(hammer, saw);
             builder1.BuildHouse();
-            */
+            
 
             // Using Constructor Dependency Injection
 
@@ -88,6 +88,17 @@ namespace InterfaceAndPolymorphism_CSharp
             IMessageService textService = new TextService();
             userNotification = new UserNotification(textService);
             userNotification.NotifyUser("Please open the door.");
+
+            */
+
+            // Setter Dependency Injection
+            Cheesecake cheesecake = new Cheesecake(); // Create the dependency outside
+            Carrotcake carrotcake = new Carrotcake(); // Create the dependency outside
+            Baker baker = new Baker(); // Instantiate the class
+
+            baker.Cheesecake = cheesecake; // Inject the dependency via Setters
+            baker.CarrotCake = carrotcake; // Inject the dependency via Setters
+            baker.BakePastry(); // Run the method
         }
     }
 }
