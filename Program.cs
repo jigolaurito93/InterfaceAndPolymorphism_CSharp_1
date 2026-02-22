@@ -74,7 +74,7 @@ namespace InterfaceAndPolymorphism_CSharp
             */
 
             // Using Constructor Dependency Injection
-            
+
             // Create an object/instance of email class as the dependency.
             IMessageService emailService = new EmailService();
 
@@ -84,6 +84,10 @@ namespace InterfaceAndPolymorphism_CSharp
             // Call the method and pass a string message as an argument
             userNotification.NotifyUser("Dont forget to this.");
 
+            // Instantiate another dependency
+            IMessageService textService = new TextService();
+            userNotification = new UserNotification(textService);
+            userNotification.NotifyUser("Please open the door.");
         }
     }
 }
