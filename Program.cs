@@ -57,8 +57,7 @@ namespace InterfaceAndPolymorphism_CSharp
             ILogger dbLogger = new DatabaseLogger();
             app = new Application(dbLogger);
             app.GetLogger();
-            */
-
+            
             // Dependency: A relationship between two classes where one class relies on another class to function properly.
             // In the context of interfaces and polymorphism, a class that depends on an interface is said to have a dependency on that interface. 
             // This allows for loose coupling, as the class can work with any implementation of the interface without needing to know the details of how it works.
@@ -67,11 +66,24 @@ namespace InterfaceAndPolymorphism_CSharp
             //Builder builder1 = new Builder();
             //builder1.BuildHouse();
 
-            // Using Constructor Dependency Injection
+
             Hammer hammer = new Hammer();
             Saw saw = new Saw();
             Builder builder1 = new Builder(hammer, saw);
             builder1.BuildHouse();
+            */
+
+            // Using Constructor Dependency Injection
+            
+            // Create an object/instance of email class as the dependency.
+            IMessageService emailService = new EmailService();
+
+            // Instantiate the UserNotification class and pass the dependency.
+            UserNotification userNotification = new UserNotification(emailService);
+            
+            // Call the method and pass a string message as an argument
+            userNotification.NotifyUser("Dont forget to this.");
+
         }
     }
 }
